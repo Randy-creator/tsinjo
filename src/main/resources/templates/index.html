@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tsinjo - Dons et Aides</title>
+</head>
+<body>
+<h1>Faire un don</h1>
+<form method="post" action="/donation">
+    <input name="donorEmail" placeholder="Email du donateur"/>
+    <input name="donorName" placeholder="Nom du donateur"/>
+    <input name="paymentRef" placeholder="Référence du paiement"/>
+    <input name="amount" type="number" placeholder="Montant"/>
+    <button type="submit">Envoyer</button>
+</form>
+
+<h2>Historique des dons</h2>
+<ul>
+    <li th:each="donation : ${donations}">
+        <span th:text="${donation.donor.name}"></span> a donné
+        <span th:text="${donation.payment.amount}"></span> Ar
+        le <span th:text="${donation.payment.creationInstant}"></span>
+        via <span th:text="${donation.payment.paymentRef}"></span>
+    </li>
+</ul>
+</body>
+</html>
