@@ -6,5 +6,4 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Donor extends Person {
-}
+public class Donor extends Person {}

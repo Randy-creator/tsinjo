@@ -9,5 +9,4 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Beneficiary extends Person {
-}
+public class Beneficiary extends Person {}
